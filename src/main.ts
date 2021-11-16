@@ -1,27 +1,20 @@
 export const extractGPS = async (): Promise<boolean> => {
-  console.log("extracting GPS");
-
   const gpmfExtract = require("gpmf-extract");
   const goproTelemetry = require(`gopro-telemetry`);
   const fs = require("fs");
+  const util = require("util");
 
-  // const file = fs.readFileSync('/Users/benfeist/Downloads/GS010021.MP4');
+  const readdir = util.promisify(fs.readdir);
 
-  // gpmfExtract(file).then(extracted => {
-  //   goproTelemetry(extracted, {}, telemetry => {
-  //     fs.writeFileSync('output_path.json', JSON.stringify(telemetry));
-  //     console.log('Telemetry saved as JSON');
-  //   });
-  // })
-  // .catch(error => console.error(error));
+  const goproVideoPath =
+    "N:/Projects/NASA RiS4E/Field Data/2021/Raw/GoPro_MAX/";
 
-  // const goproVideoPath =
-  //   "N:/Projects/NASA RiS4E/Field Data/2021/Raw/GoPro_MAX/";
+  const outputPath =
+    "N:/Projects/NASA RiS4E/Field Data/2021/Processed/360_processed/";
 
-  // const outputPath =
-  //   "N:/Projects/NASA RiS4E/Field Data/2021/Processed/360_processed/";
+  const dirListing = await readdir(goproVideoPath);
 
-  // const dirListing = await fs.readdir(goproVideoPath);
+  console.log(dirListing);
 
   (async () => {
     const largeFilePath =

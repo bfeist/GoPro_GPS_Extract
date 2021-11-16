@@ -1,5 +1,5 @@
 {
-  "name": "GoPro-extractor-typescript",
+  "name": "gopro-extractor-ts",
   "version": "0.0.1",
   "description": "GoPro-extractor-typescript",
   "author": "Ben Feist <benjamin.f.feist@nasa.gov>",
@@ -46,5 +46,8 @@
     "typedoc": "^0.20.35",
     "typescript": "^4.2.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gopro-telemetry": "^1.1.36",
+    "gpmf-extract": "^0.1.24"
+  }
 }

@@ -5,11 +5,8 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Node",
-      "program": "${workspaceFolder}/cli.ts",
-      "preLaunchTask": "tsc: build - tsconfig.json",
-      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
-      "cwd": "${workspaceRoot}",
-      "skipFiles": ["<node_internals>/**", "node_modules/**"]
+      "program": "${workspaceFolder}\\index.js",
+      "skipFiles": ["<node_internals>/**"]
     },
     {
       "type": "chrome",

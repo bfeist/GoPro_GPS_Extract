@@ -4,14 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node index.js",
+    "dev": "node --max-old-space-size=16384 index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "gopro-telemetry": "^1.1.36",
-    "gpmf-extract": "^0.1.24",
+    "gopro-telemetry": "^1.1.37",
+    "gpmf-extract": "^0.2.5",
+    "gpx-builder": "^4.1.0",
+    "moment": "^2.29.3",
     "util": "^0.12.4"
   }
 }
